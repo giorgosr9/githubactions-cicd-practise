@@ -1,0 +1,13 @@
+name: Hello
+on: workflow_dispatch
+jobs:
+    greet:
+        runs-on: ubuntu-latest
+        steps:
+            - name: clone repo
+              run: actions/checkout@v4
+                #   |
+                #   echo  "cloning repo "
+                #   echo  "echo ${{toJson(github)}}"
+                #   git clone https://github.com/${{github.repository}}.git myFiles
+                #   cd && ls myFiles rr
