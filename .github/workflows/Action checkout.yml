@@ -1,5 +1,5 @@
 name: Hello
-on: workflow_dispatch
+on: push
 jobs:
     greet:
         runs-on: ubuntu-latest
@@ -11,3 +11,16 @@ jobs:
                 #   echo  "echo ${{toJson(github)}}"
                 #   git clone https://github.com/${{github.repository}}.git myFiles
                 #   cd && ls myFiles rr
+            - name: Setup node js
+              uses: actions/checkout@v4
+              with:
+                node_version: 22
+            - name: print node version
+              run: node -v
+            - name: Install dependecies
+              run: npm install
+            - name: Run tests
+              run: npm run test
+            - name: Completed job
+              run: echo "Completed job"
+
