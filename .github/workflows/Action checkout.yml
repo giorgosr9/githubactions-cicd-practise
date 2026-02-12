@@ -1,11 +1,11 @@
 name: Hello
 on: push
 jobs:
-    greet:
+    test:
         runs-on: ubuntu-latest
         steps:
             - name: clone repo
-              run: actions/checkout@v4
+              run: actions/checkout@v3
                 #   |
                 #   echo  "cloning repo "
                 #   echo  "echo ${{toJson(github)}}"

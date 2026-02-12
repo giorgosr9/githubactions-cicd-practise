@@ -1,5 +1,5 @@
 name: Hello
-on: workflow-dispatch
+on: push
 jobs:
     greet:
         runs-on: ubuntu-latest
