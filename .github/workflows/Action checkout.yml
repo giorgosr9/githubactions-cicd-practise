@@ -12,7 +12,7 @@ jobs:
                 #   git clone https://github.com/${{github.repository}}.git myFiles
                 #   cd && ls myFiles rr
             - name: Setup node js
-              uses: actions/checkout@v4
+              uses: actions/setup-node@v4
               with:
                 node_version: 22
             - name: print node version
